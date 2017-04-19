@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ConstraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.tujun.myapplication.bletooth.MainActivity">
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Button"
+        app:layout_constraintStart_toStartOf="@id/ConstraintLayout"
+        app:layout_constraintTop_toTopOf="@id/ConstraintLayout" />
+
+    <EditText
+        android:id="@+id/et_client"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/ConstraintLayout"
+        app:layout_constraintTop_toBottomOf="@id/button"
+        app:layout_constraintRight_toLeftOf="@+id/button_client"
+         />
+
+    <Button
+        android:id="@+id/button_client"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/et_client"
+        app:layout_constraintTop_toBottomOf="@id/button"
+        android:text="发送信息字符串"
+        />
+    <Button
+        android:id="@+id/button_clientImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/ConstraintLayout"
+        app:layout_constraintTop_toBottomOf="@id/et_client"
+        android:text="发送图片"
+        />
+    <Button
+        android:id="@+id/button_clientFile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/ConstraintLayout"
+        app:layout_constraintTop_toBottomOf="@id/button_clientImg"
+        android:text="发送文件"
+        />
+    <ListView
+        android:id="@+id/lvDevices"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        app:layout_constraintStart_toStartOf="@id/ConstraintLayout"
+        app:layout_constraintTop_toBottomOf="@id/button_clientFile"
+        />
+
+</android.support.constraint.ConstraintLayout>
